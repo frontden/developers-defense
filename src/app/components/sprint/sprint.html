@@ -1,0 +1,25 @@
+<div class="app-sprint">
+  <div class="app-sprint__column">
+    <div class="app-sprint__column-title">
+      To do
+    </div>
+
+    <div class="app-sprint__column-scope">
+      <app-ticket [type]="TicketType.bug"></app-ticket>
+      <app-ticket [type]="TicketType.feature"></app-ticket>
+      <app-ticket [type]="TicketType.deployment"></app-ticket>
+    </div>
+
+  </div>
+  <div class="app-sprint__column">
+    <div class="app-sprint__column-title">
+      In progress
+    </div>
+  </div>
+  <div class="app-sprint__column">
+    <div class="app-sprint__column-title">
+      Done
+    </div>
+  </div>
+</div>
+

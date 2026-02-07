@@ -1,0 +1,29 @@
+.app-sprint {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.app-sprint__column {
+  padding: 24px;
+  border-radius: 16px;
+  background-color: #262626;
+  width: 328px;
+  min-height: 500px;
+}
+
+.app-sprint__column-scope {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.app-sprint__column-title {
+  font-weight: bold;
+  font-size: 24px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 16px;
+}
