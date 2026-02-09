@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
-import { Sprint } from './components/sprint/sprint';
+import { Game } from './components/game/game';
 
 export const routes: Routes = [
 	{
 		path: '',
-		component: Sprint,
+		component: Game,
 	}
 ];

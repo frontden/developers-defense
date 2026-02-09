@@ -1,0 +1,29 @@
+@let dev = developer();
+
+@if (dev) {
+
+    <div class="app-dev">
+        <div class="app-dev__name">
+            {{ dev.name }}
+        </div>
+        <div class="app-dev__job-title">
+            {{ dev.rank }} {{ dev.type}}
+        </div>
+
+        <div class="app-dev__stats">
+            <div>productivity:</div>
+            {{ dev.productivity}} sp/day
+        </div>
+
+        <div class="app-dev__stats">
+            <div>bug chance:</div>
+            {{ dev.bugChance}}%
+        </div>
+
+        <div class="app-dev__stats">
+            <div>overtime:</div>
+            {{ dev.overtimeChance}}% / +{{dev.overtimeAmount}} sp
+        </div>
+
+    </div>
+}

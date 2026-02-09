@@ -1,0 +1,26 @@
+.app-dev {
+  width: 200px;
+  height: 140px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #FFFFFF;
+}
+
+.app-dev__name {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.app-dev__job-title {
+  color: lightgray;
+  font-size: 10px
+}
+
+.app-dev__stats {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  padding: 4px 0;
+}
