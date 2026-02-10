@@ -1,0 +1,16 @@
+.app-game {
+  display: flex;
+  width: 100%;
+}
+
+.app-game__left-part {
+  width: 20%;
+}
+
+.app-game__mid-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}

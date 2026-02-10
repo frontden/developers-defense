@@ -1,0 +1,38 @@
+@let phase = game()?.phase;
+@let developers = game()?.developers;
+
+<div class="app-game">
+
+  <div class="app-game__left-part">
+    Office controls
+  </div>
+
+  <div class="app-game__mid-part">
+    @if (developers) {
+      <app-team
+          [developers]="developers"
+      ></app-team>
+
+      <div class="app-game__sprint-control">
+        @if (phase === GamePhase.build) {
+          <button matButton="tonal"
+                  (click)="startNextSprint()"
+          >
+            start next sprint
+          </button>
+        }
+        @if (phase === GamePhase.sprint) {
+          <button (click)="stopSprint()">stop</button>
+          <button (click)="resumeSprint()">go</button>
+          <button (click)="fasterSprint()">faster</button>
+          <button (click)="slowSprint()">slower</button>
+        }
+
+      </div>
+
+      <app-sprint></app-sprint>
+    }
+  </div>
+
+</div>
+

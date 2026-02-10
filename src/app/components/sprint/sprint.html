@@ -5,9 +5,9 @@
     </div>
 
     <div class="app-sprint__column-scope">
-      <app-ticket [type]="TicketType.bug"></app-ticket>
-      <app-ticket [type]="TicketType.feature"></app-ticket>
-      <app-ticket [type]="TicketType.deployment"></app-ticket>
+      @for(ticket of toDoTickets(); track ticket) {
+        <app-ticket [ticket]="ticket" ]></app-ticket>
+      }
     </div>
 
   </div>
@@ -15,10 +15,20 @@
     <div class="app-sprint__column-title">
       In progress
     </div>
+    <div class="app-sprint__column-scope">
+      @for(ticket of inProgressTickets(); track ticket) {
+        <app-ticket [ticket]="ticket"></app-ticket>
+      }
+    </div>
   </div>
   <div class="app-sprint__column">
     <div class="app-sprint__column-title">
       Done
+    </div>
+    <div class="app-sprint__column-scope">
+      @for(ticket of doneTickets(); track ticket) {
+        <app-ticket [ticket]="ticket" ]></app-ticket>
+      }
     </div>
   </div>
 </div>

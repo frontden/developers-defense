@@ -3,18 +3,19 @@ import { TicketType } from '../../models/ticket-type';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { LucideAngularModule, Bug, Rocket, Dock } from 'lucide-angular';
+import { Ticket } from '../../models/ticket';
 
 @Component({
 	selector: 'app-ticket',
 	imports: [CommonModule, MatIconModule, LucideAngularModule],
-	templateUrl: './ticket.html',
-	styleUrl: './ticket.scss',
+	templateUrl: './ticket-card.html',
+	styleUrl: './ticket-card.scss',
 })
-export class Ticket {
+export class TicketCard {
   TicketType = TicketType;
-	type = input<TicketType>(TicketType.bug);
+	ticket = input<Ticket>();
 	icon = computed(() => {
-		switch (this.type()) {
+		switch (this.ticket()?.type) {
 			case TicketType.bug:
 				return Bug;
 			case TicketType.feature:
